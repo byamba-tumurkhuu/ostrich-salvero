@@ -1,3 +1,4 @@
+# Ostrich-Salvero
 [Salvero](https://github.com/zcox/salvero) implementation of Ostrich remote hook based on Push & Pull socket.
 
 # Server 
@@ -5,8 +6,11 @@ A central server collects timing/metric data. Starts ostrich http admin service 
 
 ``` scala
 import org.ostrich.salvero.core.OstrichSalveroServer
-OstrichSalveroServer("tcp://127.0.0.1:5555") start()
+val server = OstrichSalveroServer("tcp://127.0.0.1:5555") 
+server.start()
 
+// When finished
+server.stop()
 ```
 
 # Client 
